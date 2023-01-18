@@ -889,112 +889,8 @@
     </div>
     <!-- Rent car end -->
 
-
     <!-- Our team start -->
-    <div class="our-team content-area bg-grea-3">
-        <div class="container">
-            <!-- Main title -->
-            <div class="main-title">
-                <h1>Executive <span>Team</span></h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-            </div>
-            <!-- Slick slider area start -->
-            <div class="slick-slider-area clearfix">
-                <div class="row slick-carousel" data-slick='{"slidesToShow": 4, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
-                    <div class="slick-slide-item">
-                        <div class="team-1">
-                            <div class="photo">
-                                <a href="#">
-                                    <img src="{% static 'img/avatar/avatar-12.jpg' %}" alt="team-1" class="img-fluid">
-                                </a>
-                                <div class="social-list clearfix">
-                                    <a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a>
-                                    <a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
-                                    <a href="#" class="google-bg"><i class="fa fa-google"></i></a>
-                                </div>
-                            </div>
-                            <div class="details">
-                                <h4><a href="team-detail.html">Brandon Miller</a></h4>
-                                <h5>Manager</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slick-slide-item">
-                        <div class="team-1">
-                            <div class="photo">
-                                <a href="#">
-                                    <img src="{% static 'img/avatar/avatar-9.jpg' %}" alt="team-1" class="img-fluid">
-                                </a>
-                                <div class="social-list clearfix">
-                                    <a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a>
-                                    <a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
-                                    <a href="#" class="google-bg"><i class="fa fa-google"></i></a>
-                                </div>
-                            </div>
-                            <div class="details">
-                                <h4><a href="team-detail.html">Michelle Nelson</a></h4>
-                                <h5>Support Manager</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slick-slide-item">
-                        <div class="team-1">
-                            <div class="photo">
-                                <a href="#">
-                                    <img src="{% static 'img/avatar/avatar-11.jpg' %}" alt="team-1" class="img-fluid">
-                                </a>
-                                <div class="social-list clearfix">
-                                    <a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a>
-                                    <a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
-                                    <a href="#" class="google-bg"><i class="fa fa-google"></i></a>
-                                </div>
-                            </div>
-                            <div class="details">
-                                <h4><a href="team-detail.html">Stone Carolyn</a></h4>
-                                <h5>Creative Director</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slick-slide-item">
-                        <div class="team-1">
-                            <div class="photo">
-                                <a href="#">
-                                    <img src="{% static 'img/avatar/avatar-10.jpg' %}" alt="team-1" class="img-fluid">
-                                </a>
-                                <div class="social-list clearfix">
-                                    <a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a>
-                                    <a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
-                                    <a href="#" class="google-bg"><i class="fa fa-google"></i></a>
-                                </div>
-                            </div>
-                            <div class="details">
-                                <h4><a href="team-detail.html">Martin Smith</a></h4>
-                                <h5>Web Developer</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slick-slide-item">
-                        <div class="team-1">
-                            <div class="photo">
-                                <a href="#">
-                                    <img src="{% static 'img/avatar/avatar-11.jpg' %}" alt="team-1" class="img-fluid">
-                                </a>
-                                <div class="social-list clearfix">
-                                    <a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a>
-                                    <a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
-                                    <a href="#" class="google-bg"><i class="fa fa-google"></i></a>
-                                </div>
-                            </div>
-                            <div class="details">
-                                <h4><a href="team-detail.html">Stone Carolyn</a></h4>
-                                <h5>Creative Director</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include 'inc/_team.html' %}
     <!-- Our team end -->
 
     <!-- Intro section start -->
@@ -1013,31 +909,6 @@
         </div>
     </div>
     <!-- Intro section end -->
-
-    <!-- Footer start -->
-    <footer class="footer">
-
-        <div class="sub-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <p class="copy">© 2020 <a href="#">Carzone Corp.</a> All Rights Reserved.</p>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="social-list-2">
-                            <ul>
-                                <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#" class="google-bg"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer end -->
 
     <!-- Car Overview Modal -->
     <div class="car-model-2">

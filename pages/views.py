@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
+from .models import Team
 
 
 # Create your views here.
@@ -8,7 +9,9 @@ class Home(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
+        team = Team.objects.all()
         context['title'] = 'Home'
+        context['team'] = team
         return context
 
 
@@ -26,7 +29,9 @@ class About(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
+        team = Team.objects.all()
         context['title'] = 'About'
+        context['team'] = team
         return context
 
 
