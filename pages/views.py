@@ -15,15 +15,6 @@ class Home(TemplateView):
         return context
 
 
-class Cars(TemplateView):
-    template_name = 'pages/cars.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data()
-        context['title'] = 'Cars'
-        return context
-
-
 class About(TemplateView):
     template_name = 'pages/about.html'
 
