@@ -11,3 +11,6 @@ class Team(models.Model):
     twitter_link = models.URLField(max_length=100)
     google_plus_link = models.URLField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return str(self.first_name) + str(self.last_name)
