@@ -12,29 +12,34 @@
             <div class="navbar-collapse collapse w-100" id="navbar">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link dropdown-toggle" href="{% url 'home' %}">
+                        {% url 'home' as home_url %}
+                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}">
                             Home
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'cars' %}">
+                        {% url 'cars' as cars_url %}
+                        <a class="nav-link {% if request.path == cars_url %}active{% endif %}" href="{{ cars_url }}">
                             Cars
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'about' %}">
+                        {% url 'about' as about_url %}
+                        <a class="nav-link {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}">
                             About
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'services' %}">
+                        {% url 'services' as services_url %}
+                        <a class="nav-link {% if request.path == services_url %}active{% endif %}" href="{{ services_url }}">
                             Services
                         </a>
                     </li>
 
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                        {% url 'contact' as contact_url %}
+                        <a class="nav-link {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}">Contact</a>
                     </li>
                     <li class="nav-item dropdown m-hide">
                         <a href="#full-page-search" class="nav-link h-icon">
