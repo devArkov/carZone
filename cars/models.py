@@ -1,5 +1,7 @@
 from django.db import models
 from _datetime import datetime
+from django_ckeditor_5.fields import CKEditor5Field
+from multiselectfield import MultiSelectField
 
 
 # Create your models here.
@@ -86,6 +88,14 @@ class Car(models.Model):
         ('6', '6'),
     )
 
+    transmission_choices = (
+        ('Manual', 'Manual'),
+        ('Automatic', 'Automatic'),
+        ('Tiptronic', 'Tiptronic'),
+        ('CVT', 'CVT'),
+        ('Robotic', 'Robotic'),
+    )
+
     title = models.CharField(max_length=255)
     state = models.CharField(max_length=2, choices=state_choices)
     city = models.CharField(max_length=65)
@@ -94,11 +104,11 @@ class Car(models.Model):
     year = models.IntegerField('year', choices=year_choices)
     condition = models.CharField(max_length=65)
     price = models.IntegerField()
-    description = models.TextField()
-    features = models.CharField(max_length=65, choices=features_choices)
+    description = CKEditor5Field('Text', config_name='extends')
+    features = MultiSelectField(choices=features_choices, max_length=255)
     body_style = models.CharField(max_length=65)
     engine = models.CharField(max_length=65)
-    transmission = models.CharField(max_length=65)
+    transmission = models.CharField( choices=transmission_choices, max_length=10)
     interior = models.CharField(max_length=65)
     miles = models.IntegerField()
     doors = models.CharField('doors', choices=door_choices, max_length=10)
