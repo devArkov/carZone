@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'cars',
     # Addons
     'django_ckeditor_5',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
