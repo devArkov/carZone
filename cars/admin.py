@@ -12,7 +12,7 @@ class CarAdmin(admin.ModelAdmin):
     list_display_links = ('title', 'thumbnail',)
     list_filter = ('fuel_type', 'is_featured')
     list_editable = ('is_featured',)
-    fields = ('title', 'description', 'car_photo')
+    # fields = ('title', 'description', 'car_photo')
     search_fields = ('title', 'year', 'fuel_type', 'color', 'condition')
     save_on_top = True
     save_as = True
