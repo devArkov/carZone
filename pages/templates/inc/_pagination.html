@@ -9,12 +9,12 @@
 
             {% for page in page_obj.paginator.page_range %}
                 {% if page_obj.number == page %}
-                    <li class="page-item"><a class="page-link active" href="#">{{ page }}</a></li>
+                    <li class="page-item"><a class="page-link active">{{ page }}</a></li>
                 {% else %}
                     <li class="page-item"><a class="page-link" href="?page={{ page }}">{{ page }}</a></li>
                 {% endif %}
             {% endfor %}
-            
+
             {% if page_obj.has_next %}
                 <li class="page-item">
                     <a class="page-link" href="?page={{ page_obj.next_page_number }}"><i class="fa fa-angle-right"></i></a>
