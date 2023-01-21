@@ -13,10 +13,18 @@ class Home(TemplateView):
         team = Team.objects.all()
         featured_cars = Car.objects.order_by('-created_at').filter(is_featured=True)
         latest_cars = Car.objects.order_by('-created_at')
+        model_search = Car.objects.values_list('model', flat=True).distinct()
+        city_search = Car.objects.values_list('city', flat=True).distinct()
+        year_search = Car.objects.values_list('year', flat=True).distinct()
+        type_search = Car.objects.values_list('body_style', flat=True).distinct()
         context['title'] = 'Home'
         context['team'] = team
         context['featured_cars'] = featured_cars
         context['latest_cars'] = latest_cars
+        context['model_search'] = model_search
+        context['city_search'] = city_search
+        context['year_search'] = year_search
+        context['type_search'] = type_search
         return context
 
 
